@@ -1,7 +1,6 @@
 # STATUS — Текущий статус проекта
 
-**Последнее обновление:** 2026-05-28 11:15 +06
-
+**Последнее обновление:** 2026-05-28 16:00 +06
 ---
 
 ## 🎯 Текущая фаза
@@ -21,6 +20,10 @@
 - ✅ `CONTEXT_RESTORE.md` — Инструкции восстановления контекста
 - ✅ `INDEX.md` — Живой индекс всех файлов
 - ✅ `STATUS.md` — Этот файл
+- 
+### Patterns Created
+- ✅ `patterns/error-handling/retry-logic.md` — Паттерн retry логики с экспоненциальной задержкой
+- ✅ `patterns/error-handling/fallback-strategies.md` — Стратегии fallback для graceful degradation
 
 ---
 
