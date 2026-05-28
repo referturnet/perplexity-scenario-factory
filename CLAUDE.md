@@ -6,7 +6,7 @@
 
 **Perplexity Scenario Factory** — систематизированная библиотека из 200 сценариев использования Perplexity/Comet browser automation + система deep research + проектная память (LLM-Wiki pattern).
 
-## Структура проекта
+## Структура проекта.
 
 ```
 perplexity-scenario-factory/
