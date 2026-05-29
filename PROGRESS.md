@@ -1,58 +1,48 @@
-PROGRESS.md# PROGRESS — Development Tracking
+# PROGRESS — Development Tracking
 
-**Last Updated:** 2026-05-28 11:00 +06
+**Last Updated:** 2026-05-29 18:30 +06
 
 ---
 
 ## 📊 Overall Progress
 
 ```
-████████████░░░░░░░░░░░░░░░░░░░░░░░░░░ 45%
+████████████████░░░░░░░░░░░░░░░░░░░░░░ 52%
 ```
 
-- **Files Created:** 13 / ~30 (target Phase 1)
-- **Directories:** 6 / 11
-- **Examples:** 1 / 5 (initial target)
-- **Skills:** 0 / 15 (planned)
-- **Patterns:** 0 / 12 (planned)
-- **Scripts:** 0 / 8 (planned)
+- **Files Created:** 22 / ~30 (target Phase 1)
+- **Directories:** 9 / 11
+- **Examples:** 1 / 5
+- **Skills:** 1 / 15
+- **Patterns:** 1 / 12
+- **UC Guides:** 2 / 200
+- **Catalog:** 10 rows documented / 200
 
 ---
 
-## 🎯 Current Sprint (2026-05-28)
+## 🎯 Session Log (2026-05-29)
 
-### ✅ Completed Today
+### ✅ Completed
 
-#### Session 1: Initial Setup (09:00-10:00)
-- ✅ Created core documentation files
-  - README.md
-  - LICENSE
-  - CLAUDE.md
-  - CONTEXT_RESTORE.md
-  - INDEX.md
-  - STATUS.md
-  - ROADMAP.md
+#### Session 3: Phase 0 Completion + Phase 1 Bootstrap (18:00-18:30)
+- ✅ CHANGELOG.md created
+- ✅ memory/ directory structure (INDEX, wiki/, raw/)
+- ✅ catalog/ directory (README, master-table, taxonomy)
+- ✅ UC-001 guide: Deep Research
+- ✅ UC-002 guide: Competitive Analysis
+- ✅ skills/research/deep-research.md
+- ✅ patterns/query-decomposition.md
+- ✅ PROGRESS.md updated (this file)
 
-#### Session 2: Directory Structure (10:00-11:00)
-- ✅ Created `/backlog/` with TODO.md
-- ✅ Created `/agent-instructions/` with README.md
-- ✅ Created `/skills/` with README.md
-- ✅ Created `/scripts/` with README.md
-- ✅ Created `/patterns/` with README.md
-- ✅ Created `/examples/` with README.md and first example
-- ✅ Updated INDEX.md with statistics
+### 🔄 Next Up
 
-### 🔄 In Progress
-
-- [ ] Creating PROGRESS.md (this file)
-- [ ] First skill file: /skills/web/navigation.md
-- [ ] First pattern file: /patterns/error-handling/retry-logic.md
-
-### 📋 Next Up
-
-- [ ] Agent instruction for Claude Code
-- [ ] Update STATUS.md
-- [ ] Create CHANGELOG entry
+- [ ] UC-003 guide: News Monitoring
+- [ ] UC-041 guide: Product Search
+- [ ] agent-instructions/claude-code.md
+- [ ] agent-instructions/perplexity-space.md
+- [ ] skills/web/navigation.md
+- [ ] Fill UC-011..040 in master table
+- [ ] Create CONTEXT_MAP.md
 
 ---
 
@@ -61,145 +51,103 @@ PROGRESS.md# PROGRESS — Development Tracking
 ### Core Files (Root)
 ```
 ✅ README.md
-✅ LICENSE  
+✅ LICENSE
 ✅ CLAUDE.md
 ✅ CONTEXT_RESTORE.md
 ✅ INDEX.md
 ✅ STATUS.md
 ✅ ROADMAP.md
-🔄 PROGRESS.md (this file)
-⏳ CHANGELOG.md
+✅ PROGRESS.md
+✅ CHANGELOG.md
+⏳ CONTEXT_MAP.md
+```
+
+### `/memory/` — LLM-Wiki Memory System
+```
+✅ INDEX.md
+✅ wiki/README.md
+✅ raw/README.md
+⏳ wiki/patterns/ (files TBD)
+⏳ wiki/findings/ (files TBD)
+⏳ wiki/concepts/ (files TBD)
+```
+
+### `/catalog/` — 200 UC Scenarios
+```
+✅ README.md
+✅ 000-master-table.md (10/200 rows)
+✅ 000-taxonomy.md
+⏳ UC guides (2/200 created)
+```
+
+### `/skills/` — Agent Skills
+```
+✅ README.md
+✅ research/deep-research.md
+⏳ web/navigation.md
+⏳ web/data-extraction.md
+⏳ commerce/product-search.md
+```
+
+### `/patterns/` — Reusable Patterns
+```
+✅ README.md
+✅ query-decomposition.md
+⏳ error-handling/retry-logic.md
+⏳ authentication/login-flow.md
 ```
 
 ### `/agent-instructions/` — IDE Agent Files
 ```
 ✅ README.md
 ⏳ claude-code.md
+⏳ perplexity-space.md
 ⏳ cursor.md
-⏳ windsurf.md
-⏳ shared/coding-standards.md
-⏳ shared/project-context.md
-⏳ shared/workflow.md
 ```
-**Progress:** 1/7 files (14%)
-
-### `/skills/` — Agent Skills
-```
-✅ README.md
-⏳ web/navigation.md
-⏳ web/form-filling.md
-⏳ web/data-extraction.md
-⏳ research/deep-research.md
-⏳ research/competitive-analysis.md
-⏳ commerce/product-search.md
-⏳ productivity/email-management.md
-```
-**Progress:** 1/8 files (12%)
-
-### `/scripts/` — Automation Scripts
-```
-✅ README.md
-⏳ web-scraping/extract-table.js
-⏳ testing/smoke-tests.js
-⏳ data-entry/bulk-upload.js
-⏳ monitoring/uptime-check.js
-```
-**Progress:** 1/5 files (20%)
-
-### `/patterns/` — Reusable Patterns
-```
-✅ README.md
-⏳ authentication/login-flow.md
-⏳ data-handling/pagination.md
-⏳ error-handling/retry-logic.md
-⏳ ui-interactions/modal-handling.md
-```
-**Progress:** 1/5 files (20%)
-
-### `/examples/` — Golden Examples
-```
-✅ README.md
-✅ example-web-research.md
-⏳ use-cases/ecommerce/product-research.md
-⏳ use-cases/research/competitive-analysis.md
-⏳ tutorials/getting-started.md
-```
-**Progress:** 2/5 files (40%)
-
-### `/backlog/` — Backlog & TODO
-```
-✅ TODO.md
-```
-**Progress:** 1/1 files (100%)
 
 ---
 
 ## 🎯 Milestone Tracking
 
-### Phase 1: Foundation (Target: Week 1)
-- [x] Repository setup
-- [x] Core documentation
-- [x] Directory structure
-- [ ] At least 3 examples
-- [ ] At least 5 skills
-- [ ] At least 3 patterns
-- [ ] IDE agent instructions
+### Phase 0: Foundation
+- [x] Repository setup ✅
+- [x] Core documentation ✅
+- [x] Directory structure ✅
+- [x] CHANGELOG.md ✅
 
-**Status:** 50% complete
+**Status:** ✅ COMPLETE
 
-### Phase 2: Content (Target: Week 2-3)
-- [ ] 20+ examples
-- [ ] 15+ skills
-- [ ] 12+ patterns
-- [ ] 8+ scripts
+### Phase 1: Core Structure
+- [x] memory/ system created
+- [x] catalog/ foundation created
+- [ ] UC guides (2/200 — 1%)
+- [ ] All skills (1/15 — 7%)
+- [ ] All patterns (1/12 — 8%)
+- [ ] Agent instructions (0/4)
 
-**Status:** Not started
-
-### Phase 3: Refinement (Target: Week 4)
-- [ ] Documentation review
-- [ ] Cross-references
-- [ ] Testing all examples
-- [ ] Community feedback
-
-**Status:** Not started
+**Status:** 🟡 In Progress — 25%
 
 ---
 
-## 📈 Velocity Metrics
+## 📈 Velocity
 
-### Files Per Hour
-- **Session 1 (09:00-10:00):** 7 files → 7 files/hour
-- **Session 2 (10:00-11:00):** 6 files → 6 files/hour
-- **Average:** 6.5 files/hour
-
-### Estimated Completion
-- **Remaining files (Phase 1):** ~17 files
-- **Est. time:** ~2.5 hours
-- **Target completion:** 2026-05-28 14:00
+- **Session 3:** ~10 files / 30 min → ~20 files/hour
+- **Bottleneck:** UC guides (200 needed) — batch approach required
 
 ---
 
 ## 🔧 Technical Debt
 
-- [ ] Add cross-links between related files
-- [ ] Standardize markdown formatting
+- [ ] Cross-link all skill files to UC that use them
 - [ ] Add table of contents to long files
-- [ ] Create templates for consistency
+- [ ] INDEX.md refresh (stats outdated)
+- [ ] Add CONTEXT_MAP.md (component relationship diagram)
 
 ---
 
-## 📝 Notes
+## 📝 Strategy Notes
 
-- Focus on creating foundational examples first
-- Skills and patterns should reference each other
-- Each example should demonstrate 2-3 skills + 1-2 patterns
-- IDE instructions should be practical and immediately usable
-
----
-
-## 🎓 Lessons Learned
-
-1. Creating comprehensive READMEs first helps structure subdirectories
-2. Russian language works well for documentation
-3. Cross-referencing between components is essential
-4. Examples drive the need for specific skills/patterns
+- UC guides: создавать пачками по 10 за сессию
+- Skills: создавать параллельно с UC-гайдами
+- Memory wiki: заполнять после каждого исследования
+- Agent instructions: приоритет — Perplexity Space + Claude Code
