@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perplexity Scenario Factory — 200 Executable Deep-Research Scenarios</title>
+<meta name="description" content="A catalog of executable Perplexity automation scenarios: deep research, competitive analysis, market sizing, news monitoring, fact-checking — with agent instructions for Claude Code, Codex, Cursor and Windsurf.">
+<meta property="og:title" content="Perplexity Scenario Factory">
+<meta property="og:description" content="Not another prompt list — executable scenarios with verification steps and project memory.">
+<link rel="canonical" href="https://referturnet.github.io/perplexity-scenario-factory/">
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;--accent:#1f6feb;--card:#161b22;border:1px solid #30363d}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+header{padding:48px 24px 24px;max-width:900px;margin:0 auto}
+h1{font-size:2rem;margin:0 0 8px}.tag{color:var(--muted)}
+input{width:100%;padding:12px 16px;border-radius:8px;border:1px solid #30363d;background:var(--card);color:var(--fg);font-size:1rem;margin:16px 0 8px}
+main{max-width:900px;margin:0 auto;padding:0 24px 64px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid #30363d;border-radius:12px;padding:16px}
+.card h2{font-size:1rem;margin:0 0 8px}.card a{color:var(--accent);text-decoration:none}
+.id{color:var(--muted);font-size:.8rem}
+footer{max-width:900px;margin:0 auto;padding:24px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+<h1>Perplexity Scenario Factory</h1>
+<p class="tag">200 planned scenarios · 10 written · LLM-Wiki project memory · agent instructions for Claude Code / Codex / Cursor / Windsurf</p>
+<input id="q" type="search" placeholder="Search scenarios: competitor research, market sizing, fact-checking…" aria-label="Search scenarios">
+</header>
+<main>
+<div class="grid" id="grid"></div>
+</main>
+<footer><a href="https://github.com/referturnet/perplexity-scenario-factory">GitHub repository</a> · Contributions welcome: 190 scenarios still open</footer>
+<script>
+const base="https://github.com/referturnet/perplexity-scenario-factory/blob/main/catalog/guides/";
+const scenarios=[
+{id:"UC-001",title:"Deep Research",kw:"deep research comprehensive report",dom:"research"},
+{id:"UC-002",title:"Competitive Analysis",kw:"competitor analysis market landscape",dom:"research"},
+{id:"UC-003",title:"News Monitoring",kw:"news monitoring tracking alerts",dom:"web"},
+{id:"UC-004",title:"Market Sizing",kw:"market sizing TAM SAM SOM",dom:"research"},
+{id:"UC-005",title:"Trend Analysis",kw:"trend analysis emerging topics",dom:"research"},
+{id:"UC-006",title:"Source Discovery",kw:"source discovery primary sources",dom:"research"},
+{id:"UC-007",title:"Fact-Checking",kw:"fact checking verification claims",dom:"research"},
+{id:"UC-008",title:"Technology Comparison",kw:"technology comparison tools stack",dom:"research"},
+{id:"UC-009",title:"Entity Research",kw:"entity research company person",dom:"research"},
+{id:"UC-010",title:"Literature Review",kw:"literature review academic papers",dom:"research"}
+];
+const grid=document.getElementById('grid');
+function render(list){grid.innerHTML=list.map(s=>`<div class="card"><span class="id">${s.id} · ${s.dom}</span><h2><a href="${base}${s.id}-${s.title.toLowerCase().replace(/\s+/g,'-')}.md">${s.title}</a></h2><p class="tag">${s.kw}</p></div>`).join('')}
+render(scenarios);
+document.getElementById('q').addEventListener('input',e=>{const q=e.target.value.toLowerCase();render(scenarios.filter(s=>(s.id+' '+s.title+' '+s.kw+' '+s.dom).toLowerCase().includes(q)))});
+</script>
+</body>
+</html>
