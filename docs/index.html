@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Perplexity Scenario Factory — 200 Executable Deep-Research Scenarios</title>
-<meta name="description" content="A catalog of executable Perplexity automation scenarios: deep research, competitive analysis, market sizing, news monitoring, fact-checking — with agent instructions for Claude Code, Codex, Cursor and Windsurf.">
+<meta name="description" content="A catalog of executable Perplexity automation scenarios: deep research, competitive analysis, market sizing, due diligence, supply chain mapping, fact-checking — with agent instructions for Claude Code, Codex, Cursor and Windsurf.">
 <meta property="og:title" content="Perplexity Scenario Factory">
 <meta property="og:description" content="Not another prompt list — executable scenarios with verification steps and project memory.">
 <link rel="canonical" href="https://referturnet.github.io/perplexity-scenario-factory/">
@@ -25,13 +25,13 @@ footer{max-width:900px;margin:0 auto;padding:24px;color:var(--muted)}
 <body>
 <header>
 <h1>Perplexity Scenario Factory</h1>
-<p class="tag">200 planned scenarios · 10 written · LLM-Wiki project memory · agent instructions for Claude Code / Codex / Cursor / Windsurf</p>
-<input id="q" type="search" placeholder="Search scenarios: competitor research, market sizing, fact-checking…" aria-label="Search scenarios">
+<p class="tag">200 planned scenarios · 20 written · LLM-Wiki project memory · agent instructions for Claude Code / Codex / Cursor / Windsurf</p>
+<input id="q" type="search" placeholder="Search scenarios: competitor research, market sizing, fact-checking, due diligence…" aria-label="Search scenarios">
 </header>
 <main>
 <div class="grid" id="grid"></div>
 </main>
-<footer><a href="https://github.com/referturnet/perplexity-scenario-factory">GitHub repository</a> · Contributions welcome: 190 scenarios still open</footer>
+<footer><a href="https://github.com/referturnet/perplexity-scenario-factory">GitHub repository</a> · Contributions welcome: 180 scenarios still open</footer>
 <script>
 const base="https://github.com/referturnet/perplexity-scenario-factory/blob/main/catalog/guides/";
 const scenarios=[
@@ -44,10 +44,20 @@ const scenarios=[
 {id:"UC-007",title:"Fact-Checking",kw:"fact checking verification claims",dom:"research"},
 {id:"UC-008",title:"Technology Comparison",kw:"technology comparison tools stack",dom:"research"},
 {id:"UC-009",title:"Entity Research",kw:"entity research company person",dom:"research"},
-{id:"UC-010",title:"Literature Review",kw:"literature review academic papers",dom:"research"}
+{id:"UC-010",title:"Literature Review",kw:"literature review academic papers",dom:"research"},
+{id:"UC-011",title:"Company Due Diligence",kw:"due diligence company deal vendor",dom:"research"},
+{id:"UC-012",title:"Patent & IP Landscape",kw:"patent IP intellectual property white space",dom:"research"},
+{id:"UC-013",title:"Regulatory & Compliance Landscape",kw:"regulatory compliance law jurisdiction",dom:"research"},
+{id:"UC-014",title:"Expert & Thought-Leader Discovery",kw:"expert discovery thought leader outreach",dom:"research"},
+{id:"UC-015",title:"Market Entry Analysis",kw:"market entry country expansion strategy",dom:"research"},
+{id:"UC-016",title:"Investment Thesis Research",kw:"investment thesis bull bear valuation",dom:"research"},
+{id:"UC-017",title:"Talent Market & Salary Research",kw:"salary benchmark hiring talent market",dom:"research"},
+{id:"UC-018",title:"Funding & Grants Landscape",kw:"funding grants accelerators investors",dom:"research"},
+{id:"UC-019",title:"Supply Chain Mapping",kw:"supply chain mapping suppliers chokepoints",dom:"research"},
+{id:"UC-020",title:"Scientific Evidence Scan",kw:"scientific evidence study grading claims",dom:"research"}
 ];
 const grid=document.getElementById('grid');
-function render(list){grid.innerHTML=list.map(s=>`<div class="card"><span class="id">${s.id} · ${s.dom}</span><h2><a href="${base}${s.id}-${s.title.toLowerCase().replace(/\s+/g,'-')}.md">${s.title}</a></h2><p class="tag">${s.kw}</p></div>`).join('')}
+function render(list){grid.innerHTML=list.map(s=>`<div class="card"><span class="id">${s.id} · ${s.dom}</span><h2><a href="${base}${s.id}-${s.title.toLowerCase().replace(/\s+/g,'-').replace(/&/g,'')}.md">${s.title}</a></h2><p class="tag">${s.kw}</p></div>`).join('')}
 render(scenarios);
 document.getElementById('q').addEventListener('input',e=>{const q=e.target.value.toLowerCase();render(scenarios.filter(s=>(s.id+' '+s.title+' '+s.kw+' '+s.dom).toLowerCase().includes(q)))});
 </script>
